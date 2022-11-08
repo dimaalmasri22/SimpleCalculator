@@ -21,6 +21,7 @@ Array.from(buttons).forEach((element) => {
 //operations
 Array.from(operations).forEach((element) => {
   element.addEventListener("click", function (event) {
+    nextNumberAfterResutl = false;
     nextPoint = false;
     currentButton = event.target.innerText;
     if (currentButton === "+" && nextButton) {
