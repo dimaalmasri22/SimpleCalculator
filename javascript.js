@@ -1,8 +1,6 @@
 let display1 = document.querySelector(".display");
 let buttons = document.getElementsByClassName("number");
 let operations = document.getElementsByClassName("operation");
-let equal = document.getElementsByClassName("equality");
-let clear = document.getElementsByClassName("clear");
 let currentButton, nextButton;
 let firstPoint, nextPoint;
 let nextNumberAfterResutl
@@ -57,15 +55,15 @@ document.querySelector(".decimalPoint") .addEventListener("click", function (_do
     display1.innerHTML = display1.innerHTML + _dot.target.innerHTML;
   });
 //equalsymbol
-Array.from(equal).forEach((element) => {
-  element.addEventListener("click", function (_event) {
+document.querySelector(".equality").addEventListener("click", function (_event) {
     display1.innerHTML = eval(display1.innerText);
     nextNumberAfterResutl = true;
   });
-});
+
 //clear
-Array.from(clear).forEach((element) => {
-  element.addEventListener("click", function (_event) {
-    display1.innerHTML = "";
+document.querySelector(".clear").addEventListener("click", function (_event) {
+    let x=_event.target.innerText;
+  if (x==="c"){display1.innerHTML = " ";}else{return;}
+  nextPoint=false;
   });
-});
+
