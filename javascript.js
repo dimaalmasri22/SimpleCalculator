@@ -58,6 +58,7 @@ document.querySelector(".decimalPoint") .addEventListener("click", function (_do
 document.querySelector(".equality").addEventListener("click", function (_event) {
     display1.innerHTML = eval(display1.innerText);
     nextNumberAfterResutl = true;
+    nextPoint = false;
   });
 
 //clear
